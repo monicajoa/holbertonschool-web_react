@@ -1,3 +1,6 @@
+//------------------Task 0----------------
+console.log("*** Output Task 0 ***")
+
 interface Student {
 	firstName: string;
 	lastName: string;

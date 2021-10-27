@@ -1,3 +1,6 @@
+//------------------Task 1---------------
+console.log("*** Output Task 1 ***")
+
 interface Teacher {
 	readonly firstName: string;
 	readonly lastName: string;
@@ -17,6 +20,9 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
+//------------------Task 2---------------
+console.log("*** Output Task 2 ***")
+
 interface Directors extends Teacher {
 	numberOfReports: number;
 }
@@ -30,6 +36,9 @@ const director1: Directors = {
 };
 console.log(director1);
 
+//------------------Task 3---------------
+console.log("*** Output Task 3 ***")
+
 interface printTeacherFunction {
 	(firstName: string, lastName: string): string;
 }
@@ -39,6 +48,9 @@ const printTeacher: printTeacherFunction = function (firstName: string, lastName
 };
 
 console.log(printTeacher("John", "Doe"));
+
+//------------------Task 4---------------
+console.log("*** Output Task 4 ***")
 
 interface StudentClassInterface {
 	firstName: string;
@@ -69,3 +81,9 @@ StudentCls = class StudentClass implements StudentClassInterface {
 		return this.firstName;
 	}
 }
+
+const newStudent = new StudentCls("Mortal", "Kombat");
+console.log(newStudent.firstName);
+console.log(newStudent.lastName);
+console.log(newStudent.workOnHomework());
+console.log(newStudent.displayName());
