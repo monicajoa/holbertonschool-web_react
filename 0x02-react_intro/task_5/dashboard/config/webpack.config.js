@@ -43,6 +43,8 @@ module.exports = {
   // DEV SERVER ENTRY POINT
   devServer: {
 		hot: true,
-		compress: true
+		compress: true,
+		static: path.resolve('./dist'),
+		historyApiFallback: true
   },
 };
