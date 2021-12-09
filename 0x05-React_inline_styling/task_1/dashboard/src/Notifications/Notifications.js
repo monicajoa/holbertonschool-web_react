@@ -1,6 +1,6 @@
 import React, { Fragment }from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, css } from "aphrodite";
+import { StyleSheet, css } from 'aphrodite';
 import { getLatestNotification } from '../utils/utils';
 import NotificationItem from './NotificationItem';
 import closeIcon from '../assets/close-icon.png';
@@ -31,12 +31,12 @@ class Notifications extends React.Component {
 					Your notifications
 				</div>
 				{ displayDrawer &&
-					<div className={css(styles.Notifications)}>
+					<div className={css(styles.notifications)}>
 						<button style={{background: 'transparent', float: 'right'}} aria-label='Close' onClick={() => console.log('Close button has been clicked')} >
-							<img src={closeIcon} alt="close-icon" style={{width: '20px'}} />
+							<img src={closeIcon} alt="close-icon" className={css(styles.notificationsbutton)} />
 						</button>
 						<p>Here is the list of notifications</p>
-						<ul>
+						<ul className={css(styles.notificationsul)}>
 							{
 								listNotifications.length === 0 &&
 									(<NotificationItem
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
 		paddingRight: '20px'
 	},
 
-	Notifications: {
+	notifications: {
 		fontFamily: 'Arial, Helvetica, sans-serif',
 		border: '2px dashed #e1354b',
 		paddingRight: '20px 5px',
@@ -82,13 +82,14 @@ const styles = StyleSheet.create({
 		left: '65%'
 	},
 
-	Notificationsbutton: {
+	notificationsbutton: {
+		width: '20px',
 		border: 'none',
 		background: 'none',
 		cursor: 'pointer'
 	},
 
-	Notificationsul: {
+	notificationsul: {
 		paddingTop: '15px',
 		paddingLeft: '40px'
 	}

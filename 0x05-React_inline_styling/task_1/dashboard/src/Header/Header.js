@@ -13,6 +13,7 @@ function Header(){
 
 const styles = StyleSheet.create({
 	Header: {
+		fontfamily: 'Arial, Helvetica, sans-serif',
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'flex-start',
