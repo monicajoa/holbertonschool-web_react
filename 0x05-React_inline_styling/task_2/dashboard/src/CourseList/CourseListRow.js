@@ -13,8 +13,8 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
 		} else {
 			myElement = (
 				<Fragment>
-					<th className={css(styles.headerRow, styles.defaultRow)}>{textFirstCell}</th>
-					<th className={css(styles.headerRow, styles.defaultRow)}>{textSecondCell}</th>
+					<th className={css(styles.defaultRow)}>{textFirstCell}</th>
+					<th className={css(styles.defaultRow)}>{textSecondCell}</th>
 				</Fragment>
 			);
 		}
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 		fontfamily: 'Arial, Helvetica, sans-serif',
 		borderbottom: '1px solid lightgray',
 		height: '25px',
-		textalign: 'left'
+		textAlign: 'left'
 	}
 });
 

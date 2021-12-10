@@ -85,8 +85,8 @@ const styles = StyleSheet.create({
   },
 
   AppBody: {
-    height: '60vh',
     fontFamily: 'Arial, Helvetica, sans-serif',
+    height: '60vh',
     margin: 0,
     padding: 0
   },
